@@ -1,3 +1,7 @@
+# Coin-Tracker
+nomadcoder.co react master class - first project
+https://lwjmcn.github.io/coin-tracker/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
