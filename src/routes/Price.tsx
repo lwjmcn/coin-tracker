@@ -7,7 +7,7 @@ const Container = styled.div`
   gap: 20px;
   grid-template-columns: repeat(2,1fr);
   max-width: 480px;
-  margin: 0 auto;
+  justify-items: center;
 `;
 const Box = styled.div`
   background-color: ${(props) => props.theme.boxColor};
@@ -18,18 +18,18 @@ const Box = styled.div`
 const TimeText = styled.span`
   display: block;
   margin-bottom: 10px;
-  font-size: 15px;
+  font-size: 12px;
   color: ${(props) => props.theme.grayTextColor};
 `;
 const Percent = styled.div<{ percent: number }>`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   color: ${(props) => 
     props.percent > 0 ? "#DA5157" : props.percent < 0 ? "#4880EE" : props.theme.grayTextColor
   };
   span {
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 600;
   }
 `;
@@ -61,7 +61,7 @@ function Price({ percent30m, percent1h, percent12h, percent7d, percent30d, perce
             <span>
               {item.value > 0 ? `+${item.value}%` : `${item.value}%`}
             </span>
-            {item.value > 0 ? (<FontAwesomeIcon icon={faArrowTrendUp} size="2x" />) : item.value < 0 ? (<FontAwesomeIcon icon={faArrowTrendDown} size="2x" />) : (<FontAwesomeIcon icon={faMinus} size="2x"/>)}
+            {item.value > 0 ? (<FontAwesomeIcon icon={faArrowTrendUp} size="xl" />) : item.value < 0 ? (<FontAwesomeIcon icon={faArrowTrendDown} size="xl" />) : (<FontAwesomeIcon icon={faMinus} size="lg"/>)}
           </Percent>
         </Box>
       ))}
